@@ -137,6 +137,12 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
 				cargoCap += 128
 			elif state['Modules'][i]['Item'] == 'int_cargorack_size8_class1':
 				cargoCap += 256
+			elif state['Modules'][i]['Item'] == 'int_corrosionproofcargorack_size1_class1':
+				cargoCap += 1
+			elif state['Modules'][i]['Item'] == 'int_corrosionproofcargorack_size1_class2':
+				cargoCap += 2
+			elif state['Modules'][i]['Item'] == 'int_corrosionproofcargorack_size4_class1':
+				cargoCap += 16
 
 		this.cargoCapacity = cargoCap
 		update_display()
